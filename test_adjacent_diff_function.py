@@ -12,6 +12,5 @@ def test_max_adjacent():
     output = NumberManipulation([-1, 1, -2])
     assert output.max_adjacent == 3
     pytest.raises(TypeError, NumberManipulation, ["str1", "str2"])
-    pytest.raises(ValueError, NumberManipulation, [1])
     pytest.raises(ValueError, NumberManipulation, [])
     return

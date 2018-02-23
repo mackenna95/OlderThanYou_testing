@@ -1,15 +1,14 @@
 class NumberManipulation:
-    """This is a Lion class.
+    """This is a NumberManipulation class.
 
     __init__ sets the attributes
 
     Attributes:
-        genus (str): a string indicating the genus
-        species (str): a string indicating the species
-        has_mane (bool): a boolean indicating if it has a mane
+        sum (int/float): indicates the sum
+        limits (int/float): indicates the max and min
+        max_adjacent (int/float): indicates the maximum difference between adjacent numbers
     """
-    def __init__(self,num_list):
-        #super(NumberManipulation, self).__init__()
+    def __init__(self, num_list):
         self.list = num_list
         self.sum = None
         self.limits = None
@@ -17,7 +16,6 @@ class NumberManipulation:
         self.return_sum()
         self.return_limits()
         self.return_max_adjacent()
-
 
     def return_sum(self):
         """
@@ -54,7 +52,6 @@ class NumberManipulation:
             raise ImportError("Import packages not found.")
         self.sum = sum_list
         logging.info("Success: sum returned.")
- 
 
     def return_limits(self):
         """"
@@ -102,12 +99,11 @@ class NumberManipulation:
         self.limits = limits
         logging.info('Success: limits returned.')
 
-
     def return_max_adjacent(self):
         """
 
         Returns maximum difference between two adjacent numbers
-        :param self:        list of numbers
+        :param self:            list of numbers
         :returns max_diff:      maximum difference between two adjacent numbers
         :raises TypeError:      input is not a list
         :raises ValueError:     list is empty
