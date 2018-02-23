@@ -6,7 +6,8 @@ class NumberManipulation:
     Attributes:
         sum (int/float): indicates the sum
         limits (int/float): indicates the max and min
-        max_adjacent (int/float): indicates the maximum difference between adjacent numbers
+        max_adjacent (int/float): indicates the maximum 
+        difference between adjacent numbers
     """
     def __init__(self, num_list):
         self.list = num_list
@@ -57,8 +58,8 @@ class NumberManipulation:
         """"
 
         Returns the minimum and maximum value of a list of numbers.
-        :param self.list:        mixed list of ints and floats
-        :return limits:         a tuple in the form (minimum_value maximum_value)
+        :param self.list:       mixed list of ints and floats
+        :return limits:         a tuple (minimum_value maximum_value)
         :raises TypeError:      list contains strings or input is not a list
         :raises ValueError:     list is empty
         :raises ImportError:    packages not found
@@ -82,12 +83,8 @@ class NumberManipulation:
         try:
             min(self.list)
         except TypeError:
-            if all(isinstance(x, int) or isinstance(x, float) for x in self.list):
-                logging.debug('TypeError: non-numeric')
-                raise TypeError('List contains non-numeric elements.')
-            else:
-                logging.debug('TypeError: unknown')
-                raise TypeError('Unknown.')
+            logging.debug('TypeError: unknown')
+            raise TypeError('Unknown.')
         except ValueError:
             logging.debug('ValueError: unknown')
             raise ValueError('Unknown.')
