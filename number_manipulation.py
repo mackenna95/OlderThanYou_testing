@@ -6,7 +6,7 @@ class NumberManipulation:
     Attributes:
         sum (int/float): indicates the sum
         limits (int/float): indicates the max and min
-        max_adjacent (int/float): indicates the maximum 
+        max_adjacent (int/float): indicates the maximum
         difference between adjacent numbers
     """
     def __init__(self, num_list):
